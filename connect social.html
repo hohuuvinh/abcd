@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>connect social</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+  body,html {
+    height: 100%;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(#f7f8fa, #e5eaee);
+  }
+  .fa-facebook {
+    color: #3b5998;
+  }
+  .fa-twitter {
+    color: #55acee;
+  }
+  .fa-instagram {
+    color: #3f729b;
+  }
+  .social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 840px;
+    transform: translate(-50%, -50%);
+  }
+  .social > a {
+    position: relative;
+    display: inline-block;
+    margin: 40px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+  .social > a:hover .front {
+    transform: translateY(-45px);
+  }
+  .social > a.fb:hover .front {
+    transform: translate(-45px, -45px);
+  }
+  .social > a.ig:hover .front {
+    transform: translate(45px, -45px);
+  }
+  .front {
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0px 40px 40px rgba(0,0,0,0.06);
+    transition: all 0.3s ease-out;
+  }
+  .front i.fa {
+    display: block;
+    margin: 80px 0 30px 0;
+    font-size: 32px;
+  }
+  .front span {
+    color: #ccc;
+  }
+  .behind {
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    width: 190px;
+    height: 190px;
+    padding-top: 160px;
+    border-radius: 3px;
+    color: #fff;
+    box-shadow: 0px 0px 40px #b6bec7, 0px 0px 120px #b6bec7;
+  }
+  .fb .behind {
+    padding-right: 40px;
+    background: #3b5998;
+  }
+  .tw .behind {
+    background: #55acee;
+  }
+  .ig .behind {
+    padding-left: 40px;
+    background: #3f729b;
+  }
+
+
+
+</style>
+  <div class="social">
+
+    <a class="fb text-center pull-left" href="">
+      <div class="front">
+        <i class="fa fa-facebook"></i>
+        <span class="count facebook">27k</span>
+      </div>
+      <div class="behind text-right">LIKE US</div>
+    </a>
+
+    <a class="tw text-center pull-left" href="">
+      <div class="front">
+        <i class="fa fa-twitter"></i>
+        <span class="count twitter">136k</span>
+      </div>
+      <div class="behind">FOLLOW</div>
+    </a>
+
+    <a class="ig text-center pull-left" href="">
+      <div class="front">
+        <i class="fa fa-instagram"></i>
+        <span class="count instagram">14.6k</span>
+      </div>
+      <div class="behind text-left">FOLLOW</div>
+    </a>
+
+  </div>
+</body>
+</html>

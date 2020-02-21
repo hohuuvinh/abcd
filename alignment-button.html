@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>button</title>
+  
+
+</head>
+<body>
+	<style type="text/css">
+		body {
+  			background: #F2F2F2;
+		}
+
+		* {
+  			box-sizing: border-box;
+		}
+
+		.alignment {
+  			position: absolute;
+  			top: 40%;
+  			left: 50%;
+  			margin-left: -62px;
+  			background: white;
+  			display: inline-block;
+  			border-radius: 5px;
+  			box-shadow: 0 6px 40px rgba(90, 102, 127, 0.1);
+		}
+		.alignment .icn {
+  			margin-top: 12px;
+  			margin-right: 0;
+  			margin-bottom: 12px;
+  			margin-left: 16px;
+  			padding-top: 3px;
+  			width: 20px;
+  			height: 20px;
+  			float: left;
+  			cursor: pointer;
+		}
+		.alignment .icn:last-child {
+  			margin-right: 16px;
+		}
+		.alignment .icn i {
+  			width: 20px;
+  			height: 2px;
+  			background: #C8CCD4;
+  			display: block;
+  			margin-bottom: 4px;
+  			border-radius: 2px;
+		}
+		.alignment .icn i:last-child {
+  			width: 12px;
+  			margin-bottom: 0;
+		}
+		.alignment .icn.mid i:last-child {
+  			margin-left: 4px;
+		}
+		.alignment .icn.rgt i:last-child {
+  			margin-left: 8px;
+		}
+		.active i {
+  			position: absolute;
+  			left: 16px;
+  			top: 15px;
+  			background: #222;
+  			width: 20px;
+  			height: 2px;
+  			cursor: pointer;
+  			border-radius: 2px;
+  			transition: all 0.3s ease;
+		}
+		.active i:nth-child(2) {
+  			margin-top: 6px;
+  			transition-delay: 0.05s;
+		}
+		.active i:last-child {
+  			margin-top: 12px;
+  			width: 12px;
+  			transition-delay: 0.1s;
+		}
+		.active.a-middle i {
+  			transform: translateX(36px);
+		}
+		.active.a-middle i:last-child {
+  			transform: translateX(40px);
+		}
+		.active.a-right i {
+  			transform: translateX(72px);
+		}
+		.active.a-right i:last-child {
+  			transform: translateX(80px);
+		}
+		
+	</style>
+<div class="alignment">
+  <div class="active"><i></i><i></i><i></i></div>
+  <div class="icn lft"><i></i><i></i><i></i></div>
+  <div class="icn mid"><i></i><i></i><i></i></div>
+  <div class="icn rgt"><i></i><i></i><i></i></div> 
+</div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type="text/javascript">
+  	(function() {
+      $('.lft').click(function() {
+        return $('.active').removeClass('a-middle a-right');
+      });
+      $('.mid').click(function() {
+        return $('.active').removeClass('a-right').addClass('a-middle');
+      });
+      $('.rgt').click(function() {
+        return $('.active').removeClass('a-middle').addClass('a-right');
+      });
+    }).call(this);
+  </script>
+</body>
+</html>
